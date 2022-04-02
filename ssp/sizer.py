@@ -1,10 +1,10 @@
-def hello():
+def estimate(a,b,c):
     """
-    Returns hello
+    Returns size of system
 
     Parameters
     ----------
-    size : {number of power units, int}
+    size : 
         number of consumed energy
     
     Returns
@@ -12,4 +12,4 @@ def hello():
     sysetm : size
         Sysetm size
     """
-    return "hello"
+    return 9
