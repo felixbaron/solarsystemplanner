@@ -14,11 +14,16 @@ def estimate(units, start_date, end_date, watt_production_capacity=0.0045):
         consumption on the last day of the energy bill
     watt_production_capacity : float, optional
         Rule of thumb: 1 Watt produces 0.0045 units per day (varies as per size, check for the irradiance map)
+    
     Returns
     -------
-    system : size
-        Sysetm size in required kW
+    estimate : dict
+        Dictionary with attributes system_size, the Watt size required,
+        daily consumption, measured in kwH per day,
+        yearly consumption, measured in kwH per year.˜
     
+    Example
+    -------
     >>> estimate(778,"2021/4/9","2022/5/3")
     {'system_size': 444.44444444444446, 'kwh_per_day': 2.0, 'kwh_per_year': 730.0}
     """
