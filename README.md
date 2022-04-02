@@ -23,7 +23,7 @@ ssp.estimate_size(yearly_consumption)
 The best is to follow the flow in the [Juypter notebook](notebook.ipynb).
 
 ## Resources
-- [Solar Power for Beginners](https://www.amazon.de/-/en/Lawrence-Lawson/dp/B08MTZ5HH4)
+- [Solar Power for Beginners](https://www.amazon.de/gp/product/B087STVCCD)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
