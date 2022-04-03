@@ -12,15 +12,7 @@ pip install solarsystemplanner
 
 ## Usage
 
-```python
-import solarsystemplanner as ssp
-
-# returns '9' as kw system size
-yearly_consumption = 1379 # number of power units [in kwH] 
-ssp.estimate_size(yearly_consumption)
-```
-
-The best is to follow the flow in the [Juypter notebook](notebook.ipynb).
+I recommend to follow the flow in the [Juypter notebook](notebook.ipynb). You can implement the framework alternatively in a web frontend. Feel free to share your completed project in this README file.
 
 ## Resources
 - [Solar Power for Beginners](https://www.amazon.de/gp/product/B087STVCCD)
