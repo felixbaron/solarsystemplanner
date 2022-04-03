@@ -28,20 +28,22 @@ def roof_size(system_size, area_of_obstruction=0, fire_safety_setback=0,
     
     Example
     -------
-    >>> roof_size(3522.34, 4,(4*1.25*2), 42)
-    {'recommended_area': 38.65638, 'maximum_constructible_area': 28.0}
+    >>> roof_size(3522.34, 4,(4*1.25*2), 53)
+    {'recommended_area': 38.65638, 'maximum_constructible_area': 39.0}
     
-    >>> roof_size(3522.34, 4,(4*1.25*2), 20)
+    >>> roof_size(3522.34, 4,(4*1.25*2), 21)
     Traceback (most recent call last):
-    Exception: The roof of 20 sq. m. is too small to install the recmomended size of 38.65638sq. m.
+    Exception: The roof of 21 sq. m. is too small to install the recmomended size of 38.65638sq. m., since the maximum contructible area is 7.0.
     """
     recommended_area = (system_size/1000 * sqm_per_kw_needed) + area_of_obstruction + fire_safety_setback
     maximum_constructible_area = available_area - area_of_obstruction - fire_safety_setback
     try:
-        assert available_area > recommended_area
+        assert maximum_constructible_area > recommended_area
     except AssertionError:
         raise Exception("The roof of " + str(available_area) + " sq. m. is too \
-small to install the recmomended size of " + str(recommended_area) + "sq. m.")
+small to install the recmomended size of " + str(recommended_area) + "sq. m., \
+since the maximum contructible area is " + str(maximum_constructible_area) + ".\
+")
     return {
         "recommended_area": recommended_area,
         "maximum_constructible_area": maximum_constructible_area
