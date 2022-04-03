@@ -1,6 +1,6 @@
 from datetime import datetime, date
 
-def estimate(units, start_date, end_date, watt_production_capacity=0.0045):
+def estimate(units, start_date, end_date, watt_production_capacity=0.0027):
     """
     Returns size of system
 
@@ -13,7 +13,7 @@ def estimate(units, start_date, end_date, watt_production_capacity=0.0045):
     end_date : datetime.date object
         consumption on the last day of the energy bill
     watt_production_capacity : float, optional
-        Rule of thumb: 1 Watt produces 0.0045 units per day (varies as per size, check for the irradiance map)
+        Rule of thumb: 1 Watt produces 0.0027 units per day (varies as per size, check for the irradiance map)
     
     Returns
     -------
@@ -25,7 +25,7 @@ def estimate(units, start_date, end_date, watt_production_capacity=0.0045):
     Example
     -------
     >>> estimate(778,"2021/4/9","2022/5/3")
-    {'system_size': 444.44444444444446, 'kwh_per_day': 2.0, 'kwh_per_year': 730.0}
+    {'system_size': 740.7407407407406, 'kwh_per_day': 2.0, 'kwh_per_year': 730.0}
     """
     date_format = "%Y/%m/%d"
     start_date = datetime.strptime(start_date, date_format)
